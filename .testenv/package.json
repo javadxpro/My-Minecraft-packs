@@ -1,0 +1,8 @@
+{
+  "name": "truecraft-smoke-test",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node setup.js && node test.js"
+  }
+}
