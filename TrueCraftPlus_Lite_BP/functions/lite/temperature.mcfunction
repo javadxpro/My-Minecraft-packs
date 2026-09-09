@@ -1,16 +1,16 @@
 # TrueCraft+ LITE - temperature system (every second)
 # zone base target
-execute as @a[scores={tc_zone=0}] run scoreboard players operation @s tc_d = #z0 tc_meta
-execute as @a[scores={tc_zone=1}] run scoreboard players operation @s tc_d = #z1 tc_meta
-execute as @a[scores={tc_zone=2}] run scoreboard players operation @s tc_d = #z2 tc_meta
-execute as @a[scores={tc_zone=3}] run scoreboard players operation @s tc_d = #z3 tc_meta
-execute as @a[scores={tc_zone=4}] run scoreboard players operation @s tc_d = #z4 tc_meta
+execute as @a[scores={tc_zone=0}] run scoreboard players operation @s tc_d = qz0 tc_meta
+execute as @a[scores={tc_zone=1}] run scoreboard players operation @s tc_d = qz1 tc_meta
+execute as @a[scores={tc_zone=2}] run scoreboard players operation @s tc_d = qz2 tc_meta
+execute as @a[scores={tc_zone=3}] run scoreboard players operation @s tc_d = qz3 tc_meta
+execute as @a[scores={tc_zone=4}] run scoreboard players operation @s tc_d = qz4 tc_meta
 # night is colder
-execute as @a if score #night tc_meta matches 1 run scoreboard players remove @s tc_d 10
+execute as @a if score qnight tc_meta matches 1 run scoreboard players remove @s tc_d 10
 # rain chill (sheltered zone 4 is safe)
-execute as @a unless entity @s[scores={tc_zone=4}] if score #wstate tc_meta matches 1 run scoreboard players remove @s tc_d 8
+execute as @a unless entity @s[scores={tc_zone=4}] if score qwstate tc_meta matches 1 run scoreboard players remove @s tc_d 8
 # snowfall: extra cold in snowfields
-execute as @a[scores={tc_zone=2}] if score #wstate tc_meta matches 1 run scoreboard players remove @s tc_d 6
+execute as @a[scores={tc_zone=2}] if score qwstate tc_meta matches 1 run scoreboard players remove @s tc_d 6
 # wet clothes steal warmth
 execute as @a[scores={tc_wet=31..}] run scoreboard players remove @s tc_d 10
 # leather insulation warms cold zones

@@ -76,7 +76,7 @@ execute as @a at @s if block ~1 ~ ~-1 bed if score @s tc_heat matches 1.. run sc
 execute as @a at @s if block ~-1 ~ ~1 bed if score @s tc_heat matches 1.. run scoreboard players set @s tc_camp 2
 # ---------- drying ----------
 execute as @a[scores={tc_heat=1..}] run scoreboard players remove @s tc_wet 8
-execute as @a[scores={tc_wet=1..,tc_zone=1}] if score #night tc_meta matches 0 run scoreboard players remove @s tc_wet 3
+execute as @a[scores={tc_wet=1..,tc_zone=1}] if score qnight tc_meta matches 0 run scoreboard players remove @s tc_wet 3
 execute as @a[scores={tc_wet=1..}] run scoreboard players remove @s tc_wet 1
 execute as @a[scores={tc_wet=..-1}] run scoreboard players set @s tc_wet 0
 # ---------- drinking: stand IN fresh water ----------
@@ -84,23 +84,26 @@ execute as @a at @s if block ~ ~ ~ water if score @s tc_thirst matches ..95 run 
 execute as @a at @s if block ~ ~ ~ water run scoreboard players add @s tc_wet 10
 execute as @a[scores={tc_wet=101..}] run scoreboard players set @s tc_wet 100
 # raw water sickness (unless warming by a fire)
-execute as @a at @s if block ~ ~ ~ water if score #m11 tc_meta matches 4 if score @s tc_heat matches ..0 run effect @s nausea 9 0 true
-execute as @a at @s if block ~ ~ ~ water if score #m11 tc_meta matches 4 if score @s tc_heat matches ..0 run effect @s hunger 9 0 true
-execute as @a at @s if block ~ ~ ~ water if score #m11 tc_meta matches 4 if score @s tc_heat matches ..0 run tellraw @s {"rawtext":[{"text":"§7That water tasted dirty... boil your drinks near a campfire."}]}
+execute as @a at @s if block ~ ~ ~ water if score qm11 tc_meta matches 4 if score @s tc_heat matches ..0 run effect @s nausea 9 0 true
+execute as @a at @s if block ~ ~ ~ water if score qm11 tc_meta matches 4 if score @s tc_heat matches ..0 run effect @s hunger 9 0 true
+execute as @a at @s if block ~ ~ ~ water if score qm11 tc_meta matches 4 if score @s tc_heat matches ..0 run tellraw @s {"rawtext":[{"text":"§7That water tasted dirty... boil your drinks near a campfire."}]}
 # eat snow (cold zones): small sip, chills you
 execute as @a at @s if block ~ ~-1 ~ snow if score @s tc_thirst matches ..97 run scoreboard players add @s tc_thirst 2
 execute as @a at @s if block ~ ~-1 ~ snow_layer if score @s tc_thirst matches ..97 run scoreboard players add @s tc_thirst 2
 execute as @a at @s if block ~ ~-1 ~ snow run scoreboard players remove @s tc_temp 1
 execute as @a at @s if block ~ ~-1 ~ snow_layer run scoreboard players remove @s tc_temp 1
 # ---------- discovery messages ----------
-execute as @a[scores={tc_zone=1}] if score @s tc_zone != @s tc_zoneL run tellraw @s {"rawtext":[{"text":"§6New area discovered: Desert §7(+3 pts)"}]}
-execute as @a[scores={tc_zone=1}] if score @s tc_zone != @s tc_zoneL run scoreboard players add @s tc_points 3
-execute as @a[scores={tc_zone=2}] if score @s tc_zone != @s tc_zoneL run tellraw @s {"rawtext":[{"text":"§bNew area discovered: Snowfields §7(+3 pts)"}]}
-execute as @a[scores={tc_zone=2}] if score @s tc_zone != @s tc_zoneL run scoreboard players add @s tc_points 3
-execute as @a[scores={tc_zone=3}] if score @s tc_zone != @s tc_zoneL run tellraw @s {"rawtext":[{"text":"§2New area discovered: Cold Forest §7(+3 pts)"}]}
-execute as @a[scores={tc_zone=3}] if score @s tc_zone != @s tc_zoneL run scoreboard players add @s tc_points 3
-execute as @a[scores={tc_zone=4}] if score @s tc_zone != @s tc_zoneL run tellraw @s {"rawtext":[{"text":"§7New area discovered: Shelter/Cave §7(+3 pts)"}]}
-execute as @a[scores={tc_zone=4}] if score @s tc_zone != @s tc_zoneL run scoreboard players add @s tc_points 3
-execute as @a[scores={tc_zone=0}] if score @s tc_zoneL matches 1..4 run tellraw @s {"rawtext":[{"text":"§aNew area discovered: Open Plains §7(+3 pts)"}]}
-execute as @a[scores={tc_zone=0}] if score @s tc_zoneL matches 1..4 run scoreboard players add @s tc_points 3
+# zone changed? (tc_x = new zone - old zone; avoids the != operator for old parsers)
+execute as @a run scoreboard players operation @s tc_x = @s tc_zone
+execute as @a run scoreboard players operation @s tc_x -= @s tc_zoneL
+execute as @a[scores={tc_zone=1}] if score @s tc_x matches ..-1 run tellraw @s {"rawtext":[{"text":"§6New area discovered: Desert §7(+3 pts)"}]}
+execute as @a[scores={tc_zone=1}] if score @s tc_x matches ..-1 run scoreboard players add @s tc_points 3
+execute as @a[scores={tc_zone=2}] if score @s tc_x matches ..-1 run tellraw @s {"rawtext":[{"text":"§bNew area discovered: Snowfields §7(+3 pts)"}]}
+execute as @a[scores={tc_zone=2}] if score @s tc_x matches ..-1 run scoreboard players add @s tc_points 3
+execute as @a[scores={tc_zone=3}] if score @s tc_x matches ..-1 run tellraw @s {"rawtext":[{"text":"§2New area discovered: Cold Forest §7(+3 pts)"}]}
+execute as @a[scores={tc_zone=3}] if score @s tc_x matches ..-1 run scoreboard players add @s tc_points 3
+execute as @a[scores={tc_zone=4}] if score @s tc_x matches ..-1 run tellraw @s {"rawtext":[{"text":"§7New area discovered: Shelter/Cave §7(+3 pts)"}]}
+execute as @a[scores={tc_zone=4}] if score @s tc_x matches ..-1 run scoreboard players add @s tc_points 3
+execute as @a[scores={tc_zone=0}] if score @s tc_x matches ..-1 run tellraw @s {"rawtext":[{"text":"§aNew area discovered: Open Plains §7(+3 pts)"}]}
+execute as @a[scores={tc_zone=0}] if score @s tc_x matches ..-1 run scoreboard players add @s tc_points 3
 execute as @a run scoreboard players operation @s tc_zoneL = @s tc_zone

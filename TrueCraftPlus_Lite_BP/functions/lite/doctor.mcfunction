@@ -2,11 +2,11 @@
 # Run: /function lite/doctor  (run it twice, a few seconds apart)
 tellraw @s {"rawtext":[{"text":"§e=== TrueCraft+ LITE Doctor ==="}]}
 # 1) did the auto-setup (boot) run?
-execute if score #init tc_meta matches 1 run tellraw @s {"rawtext":[{"text":"§2[OK] §fAuto-setup ran."}]}
-execute unless score #init tc_meta matches 1 run tellraw @s {"rawtext":[{"text":"§c[PROBLEM] §fAuto-setup never ran. Fix: type §e/function setup"}]}
+execute if score qinit tc_meta matches 1 run tellraw @s {"rawtext":[{"text":"§2[OK] §fAuto-setup ran."}]}
+execute unless score qinit tc_meta matches 1 run tellraw @s {"rawtext":[{"text":"§c[PROBLEM] §fAuto-setup never ran. Fix: type §e/function setup"}]}
 # 2) is the automatic per-second clock (tick.json) advancing? Compare this number
 #    with the next doctor run: if it did not grow, your client is not running tick.json.
-tellraw @s {"rawtext":[{"text":"§fClock counter: §e"},{"score":{"name":"#t","objective":"tc_meta"}},{"text":" §7(run doctor again - if this number grew, the clock works)"}]}
+tellraw @s {"rawtext":[{"text":"§fClock counter: §e"},{"score":{"name":"qt","objective":"tc_meta"}},{"text":" §7(run doctor again - if this number grew, the clock works)"}]}
 # 3) action bar rendering test
 titleraw @s actionbar {"rawtext":[{"text":"§aACTIONBAR TEST §7- if you can read this above your hotbar, the HUD works"}]}
 tellraw @s {"rawtext":[{"text":"§fDid the green ACTIONBAR TEST appear above your hotbar? §7If NO, run §e/function lite/hud_sidebar §fto use the sidebar HUD instead."}]}
