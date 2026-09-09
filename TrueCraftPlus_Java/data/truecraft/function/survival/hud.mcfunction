@@ -1,0 +1,2 @@
+# TrueCraft+ Java - action bar HUD
+title @a actionbar [{"text":"Temp ","color":"aqua"},{"score":{"name":"*","objective":"tc_temp"}},{"text":" | ","color":"dark_gray"},{"text":"Thirst ","color":"blue"},{"score":{"name":"*","objective":"tc_thirst"}},{"text":" | ","color":"dark_gray"},{"text":"Wet ","color":"gray"},{"score":{"name":"*","objective":"tc_wet"}},{"text":"% | ","color":"dark_gray"},{"text":"","color":"green"},{"score":{"name":"*","objective":"tc_pts"},"color":"green"},{"text":" pts","color":"green"}]

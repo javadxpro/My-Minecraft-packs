@@ -1,0 +1,8 @@
+{
+  "condition": "minecraft:any_of",
+  "terms": [
+    { "condition": "minecraft:reference", "name": "truecraft:hold/torch" },
+    { "condition": "minecraft:reference", "name": "truecraft:hold/soul_torch" },
+    { "condition": "minecraft:reference", "name": "truecraft:hold/lantern" }
+  ]
+}
