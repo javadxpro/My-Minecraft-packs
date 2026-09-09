@@ -1,0 +1,6 @@
+{
+  "condition": "minecraft:location_check",
+  "predicate": {
+    "light": { "sky": { "min": 14 } }
+  }
+}

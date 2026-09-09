@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:cooked_beef"
+    },
+    {
+      "item": "minecraft:brown_mushroom"
+    },
+    {
+      "item": "minecraft:carrot"
+    }
+  ],
+  "result": {
+    "id": "minecraft:rabbit_stew",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Survivor's Stew\", \"italic\": false, \"color\": \"#D8A24A\"}",
+      "minecraft:lore": [
+        "{\"text\": \"A hearty homemade meal\", \"color\": \"gray\", \"italic\": false}",
+        "{\"text\": \"+15 thirst\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}

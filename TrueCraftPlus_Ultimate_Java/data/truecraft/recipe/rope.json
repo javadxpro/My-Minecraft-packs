@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "s",
+    "s",
+    "s"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "id": "minecraft:string",
+    "count": 3,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Rope\", \"italic\": false, \"color\": \"#C8B896\"}",
+      "minecraft:custom_data": {
+        "tc_id": "rope"
+      },
+      "minecraft:lore": [
+        "{\"text\": \"Sturdy survival rope\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}

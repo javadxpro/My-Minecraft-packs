@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "i",
+    "s"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "minecraft:iron_sword",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Survival Knife\", \"italic\": false, \"color\": \"#B8C4CC\"}",
+      "minecraft:custom_data": {
+        "tc_id": "knife"
+      },
+      "minecraft:lore": [
+        "{\"text\": \"Light, quick, reliable\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}

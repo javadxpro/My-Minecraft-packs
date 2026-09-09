@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "minecraft:string"
+    }
+  ],
+  "result": {
+    "id": "minecraft:leather_chestplate",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Backpack\", \"italic\": false, \"color\": \"#8A5A2B\"}",
+      "minecraft:custom_data": {
+        "tc_id": "backpack"
+      },
+      "minecraft:dyed_color": 4330715,
+      "minecraft:lore": [
+        "{\"text\": \"Carry more, walk far\", \"color\": \"gray\", \"italic\": false}",
+        "{\"text\": \"Its own 3 kg never counts against you\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}

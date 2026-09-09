@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "result": {
+    "id": "minecraft:paper",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Water Filter\", \"italic\": false, \"color\": \"#7FA6A0\"}",
+      "minecraft:custom_data": {
+        "tc_id": "water_filter"
+      },
+      "minecraft:lore": [
+        "{\"text\": \"Purifies water\", \"color\": \"gray\", \"italic\": false}",
+        "{\"text\": \"Used to craft canteens\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}

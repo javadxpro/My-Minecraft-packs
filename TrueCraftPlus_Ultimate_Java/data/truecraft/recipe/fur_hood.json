@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:leather_helmet"
+    },
+    {
+      "item": "minecraft:rabbit_hide"
+    },
+    {
+      "item": "minecraft:rabbit_hide"
+    }
+  ],
+  "result": {
+    "id": "minecraft:leather_helmet",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Fur Hood\", \"italic\": false, \"color\": \"#D8C39A\"}",
+      "minecraft:custom_data": {
+        "tc_id": "fur_hood"
+      },
+      "minecraft:dyed_color": 5526619,
+      "minecraft:lore": [
+        "{\"text\": \"Warm winter clothing\", \"color\": \"gray\", \"italic\": false}",
+        "{\"text\": \"+10 insulation in cold biomes\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}

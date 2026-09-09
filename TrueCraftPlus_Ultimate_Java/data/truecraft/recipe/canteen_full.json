@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:potion"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:leather"
+    }
+  ],
+  "result": {
+    "id": "minecraft:honey_bottle",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Canteen (Full)\", \"italic\": false, \"color\": \"#4FA8D8\"}",
+      "minecraft:custom_data": {
+        "tc_id": "canteen_full"
+      },
+      "minecraft:lore": [
+        "{\"text\": \"Purified drinking water\", \"color\": \"gray\", \"italic\": false}",
+        "{\"text\": \"+80 thirst when drunk\", \"color\": \"gray\", \"italic\": false}",
+        "{\"text\": \"Returns the empty canteen\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}

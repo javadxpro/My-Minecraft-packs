@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:white_wool"
+    },
+    {
+      "item": "minecraft:white_wool"
+    },
+    {
+      "item": "minecraft:white_wool"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:leather"
+    }
+  ],
+  "result": {
+    "id": "minecraft:white_bed",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Sleeping Bag\", \"italic\": false, \"color\": \"#D8D8D8\"}",
+      "minecraft:lore": [
+        "{\"text\": \"A camper's bed - light and warm\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}

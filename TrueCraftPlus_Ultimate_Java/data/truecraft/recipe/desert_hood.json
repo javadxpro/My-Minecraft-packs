@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:leather_helmet"
+    },
+    {
+      "item": "minecraft:white_wool"
+    },
+    {
+      "item": "minecraft:white_wool"
+    }
+  ],
+  "result": {
+    "id": "minecraft:leather_helmet",
+    "count": 1,
+    "components": {
+      "minecraft:custom_name": "{\"text\": \"Desert Headwrap\", \"italic\": false, \"color\": \"#EDE6D6\"}",
+      "minecraft:custom_data": {
+        "tc_id": "desert_hood"
+      },
+      "minecraft:dyed_color": 16118560,
+      "minecraft:lore": [
+        "{\"text\": \"Light desert clothing\", \"color\": \"gray\", \"italic\": false}",
+        "{\"text\": \"Breathable: -10 heat in hot biomes\", \"color\": \"gray\", \"italic\": false}"
+      ]
+    }
+  }
+}
