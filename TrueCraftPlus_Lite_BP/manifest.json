@@ -1,0 +1,21 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "TrueCraft+ Real Survival LITE [BP] - No Scripts",
+    "description": "Realistic survival with ZERO JavaScript - pure functions + scoreboards. Works on patched/modified clients where script packs fail to import. Temperature, thirst, weight, camping, weather, exploration.",
+    "uuid": "83c55ddd-019f-48d6-8f88-dd46bb66588d",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 80]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "cf2c46ec-5d40-4c1f-bf93-a87aa9a87823",
+      "version": [1, 0, 0]
+    }
+  ],
+  "metadata": {
+    "authors": ["TrueCraft+"],
+    "license": "MIT"
+  }
+}

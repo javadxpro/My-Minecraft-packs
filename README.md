@@ -2,7 +2,46 @@
 
 Minecraft Bedrock Edition add-ons built with vanilla-first, mobile-friendly design.
 
-## TrueCraft+ Real Survival (Behavior Pack)
+## Two editions
+
+| Edition | Folder | Best for |
+| --- | --- | --- |
+| **Full** | `TrueCraft+_Real_Survival_BP/` | Vanilla Minecraft 1.26+ — full simulation via the Script API (`@minecraft/server 2.3.0`) |
+| **LITE (no scripts)** | `TrueCraftPlus_Lite_BP/` | **Patched/modified clients** (Render Dragon patches, low-end builds) where packs containing JavaScript fail to import, and any client 1.20.80+ |
+
+### Why a LITE edition?
+
+Modified Bedrock clients often ship with a broken or stripped QuickJS
+(script) engine, so any behavior pack with a `script` module fails to import
+("There was an error importing this file"). The LITE edition contains **zero
+JavaScript** — only `.mcfunction`, scoreboards and tags — so it imports like a
+vanilla data pack on practically any client.
+
+### LITE gameplay
+
+- **Temperature** (0–100): zone-based climate (desert/snow/taiga/sheltered/
+  plains detected from ground blocks + overhead cover), night chill, rain chill
+  and snowfall, wetness, clothing (leather warms, iron conducts, chain
+  breathes, gold absorbs), heat from campfires/torches (held too)/lava/magma
+- **Thirst**: steady drain + desert-day and heavy-armor penalties; drink by
+  standing in water (raw water may sicken you — drink near a campfire to stay
+  safe); eating snow gives a small sip and chills you
+- **Weight**: armor kg (leather 1/3/2/1, iron 2/5/4/2, …) with Slowness I–II
+- **Camping**: campfire warmth/drying; campfire + bed nearby = Safe Camp
+  regeneration
+- **Weather**: built-in natural rain/clear cycle; manual `/function rain`,
+  `/function clear`
+- **Day/night**: 20-minute internal cycle; resync with `/function day` or
+  `/function night`
+- **Exploration**: discovery messages + points when entering new zone types;
+  `/function exploration/spawn_ruin` builds an abandoned camp with loot
+- **Milestones**: day 1/5/10/30/100 announcements
+- Auto-installs on first tick (no cheats needed); `/function help` in game
+
+Install: open `packs/TrueCraftPlus_Lite.mcaddon` (or `.mcpack`), or copy
+`TrueCraftPlus_Lite_BP/` into your world's `behavior_packs`.
+
+## Full edition (Script API)
 
 A realistic, calm and immersive survival experience: body temperature, thirst,
 clothing weight, camping and exploration. **No fantasy, no magic, no RPG

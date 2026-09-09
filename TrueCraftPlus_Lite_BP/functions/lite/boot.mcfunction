@@ -1,0 +1,24 @@
+# TrueCraft+ LITE - one-time world setup (also runs automatically)
+scoreboard objectives add tc_temp dummy Temp
+scoreboard objectives add tc_thirst dummy Thirst
+scoreboard objectives add tc_wet dummy Wet
+scoreboard objectives add tc_zone dummy Zone
+scoreboard objectives add tc_zoneL dummy ZoneL
+scoreboard objectives add tc_heat dummy Heat
+scoreboard objectives add tc_camp dummy Camp
+scoreboard objectives add tc_ap dummy ArmorKg
+scoreboard objectives add tc_lth dummy Lth
+scoreboard objectives add tc_irn dummy Irn
+scoreboard objectives add tc_points dummy Points
+scoreboard objectives add tc_d dummy D
+scoreboard objectives add tc_e dummy E
+scoreboard objectives add tc_meta dummy TC
+scoreboard players set #z0 tc_meta 52
+scoreboard players set #z1 tc_meta 82
+scoreboard players set #z2 tc_meta 12
+scoreboard players set #z3 tc_meta 30
+scoreboard players set #z4 tc_meta 46
+scoreboard players set #c10 tc_meta 10
+scoreboard players set #wdur tc_meta 0
+scoreboard players set #init tc_meta 1
+tellraw @a {"rawtext":[{"text":"§2[TrueCraft+ LITE] §fInstalled! No scripts needed. §7Type §e/function help"}]}
