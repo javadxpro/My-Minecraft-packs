@@ -20,5 +20,12 @@ scoreboard players set #z3 tc_meta 30
 scoreboard players set #z4 tc_meta 46
 scoreboard players set #c10 tc_meta 10
 scoreboard players set #wdur tc_meta 0
+scoreboard players set #night tc_meta 0
+scoreboard players set #wstate tc_meta 0
+scoreboard players set #f1 tc_meta 0
+scoreboard players set #f5 tc_meta 0
+scoreboard players set #f10 tc_meta 0
+scoreboard players set #f30 tc_meta 0
+scoreboard players set #f100 tc_meta 0
 scoreboard players set #init tc_meta 1
 tellraw @a {"rawtext":[{"text":"§2[TrueCraft+ LITE] §fInstalled! No scripts needed. §7Type §e/function help"}]}
